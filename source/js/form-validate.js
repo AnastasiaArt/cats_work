@@ -2,7 +2,7 @@ const modal = document.querySelector('.modal-error');
 const btnModal = document.querySelector('.modal-error__btn');
 
 var template_params = {
-   "name": "user_name_value",
+   "name": "name_value",
    "email": "email_value",
    "tel": "tel_value",
    "question": "question_value"
