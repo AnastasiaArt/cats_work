@@ -1,0 +1,41 @@
+.btn {
+    display: block;
+    border: 3px solid $accent-color;
+    border-radius: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.15rem;
+    position: relative;
+    transition: all $duration $transition-style;
+    width: 100%;
+
+    &--accent {
+        color: $main-color;
+        background-color: $accent-color;
+    }
+
+    &--main {
+        color: $white;
+        background-color: $main-color;
+        border: 3px solid $main-color;
+    }
+
+    &:focus,
+    &:hover {
+        box-shadow: inset 0 0 0 3px $white;
+    }
+
+    &:active {
+        transform: scale(0.98);
+    }
+}
+
+@include respond-to(medium) {
+    .btn {
+        max-width: 275px;
+        padding: 1rem 1.8rem;
+    }
+}

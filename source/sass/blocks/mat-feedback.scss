@@ -1,0 +1,49 @@
+.mat-feedback {
+    margin-bottom: 8%;
+    position: relative;
+}
+
+.mat-feedback__title {
+    margin: 0;
+    margin-bottom: 7.5%;
+    font-size: 1.65rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.mat-feedback__contacts {
+    margin-bottom: 10%;
+}
+
+@include respond-to(large) {
+    .mat-feedback__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        position: relative;
+
+        &::after {
+            @include pseudo;
+
+            bottom: 0;
+            left: 25%;
+            max-width: 441px;
+            max-height: 192px;
+            width: 30.65vw;
+            height: 13.35vw;
+            z-index: -2;
+            background-image: url(../img/svg/logo.svg);
+            background-size: cover;
+            transform: translateX(-50%);
+        }
+    }
+
+    .mat-feedback__contacts {
+        width: 48%;
+        margin-bottom: 0;
+    }
+
+    .mat-feedback__form {
+        width: 48%;
+    }
+}

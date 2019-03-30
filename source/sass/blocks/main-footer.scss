@@ -1,0 +1,38 @@
+.main-footer {
+    padding: 1rem 0;
+    background-color: $main-color;
+    color: $white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.main-footer__container {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-footer__logo-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 70%;
+}
+
+.main-footer__logo--link {
+    color: $white;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.main-footer__logo {
+    width: 17%;
+    min-width: $min-width-logo;
+
+    &--robot {
+        width: 20%;
+        min-width: 50px;
+    }
+}

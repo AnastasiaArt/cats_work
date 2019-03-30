@@ -1,0 +1,50 @@
+.contacts {
+    position: relative;
+    padding-bottom: 30px;
+
+    &::after {
+        @include pseudo;
+
+        width: 40%;
+        height: 3px;
+        background-color: $accent-color;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+    }
+}
+
+.contacts__site {
+    display: block;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: $main-color;
+    margin: 0 24%;
+    margin-bottom: 0.95rem;
+}
+
+.contacts__note {
+    display: block;
+    font-size: 0.85rem;
+    margin-bottom: 2rem;
+}
+
+.contacts__phone {
+    margin: 0;
+    font-weight: 500;
+    font-size: 1.05rem;
+    margin-bottom: 0.7rem;
+}
+
+@include respond-to(large) {
+    .contacts {
+        padding-bottom: 0;
+
+        &::after {
+            width: 3px;
+            height: 100%;
+            left: 102%;
+            top: 0;
+        }
+    }
+}

@@ -1,0 +1,64 @@
+.mat-video {
+    width: 100%;
+    margin: $center;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 20;
+    background-image: url(../img/video.webp);
+    background-size: 280px auto;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    & iframe {
+        display: block;
+        margin: $center;
+        width: 280px;
+        height: auto;
+        object-fit: contain;
+        position: relative;
+        z-index: 20;
+    }
+}
+
+@include respond-to(medium) {
+    .mat-video {
+        margin-bottom: 4.2rem;
+        background-size: 560px 315px;
+
+        & iframe {
+            width: 560px;
+            height: 315px;
+        }
+
+        &::before {
+            @include pseudo;
+
+            bottom: 80%;
+            right: 80%;
+            width: 25.7vw;
+            height: 22.2vw;
+            max-width: 369px;
+            max-height: 319px;
+            z-index: -1;
+            background-image: url(../img/svg/cat-foot-intro.svg);
+            background-size: cover;
+        }
+    }
+}
+
+@include respond-to(large) {
+    .mat-video {
+        background-size: 853px 480px;
+
+        & iframe {
+            width: 853px;
+            height: 480px;
+        }
+    }
+}
+
+@include respond-to(big-large) {
+    .mat-video {
+        margin-bottom: 6.3rem;
+    }
+}

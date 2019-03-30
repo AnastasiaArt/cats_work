@@ -1,0 +1,223 @@
+.mat-description {
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 10;
+}
+
+.mat-description__title {
+    font-size: 1.08rem;
+    font-weight: 300;
+    margin-bottom: 10vw;
+    line-height: 1.75rem;
+    background-color: $white;
+    position: relative;
+
+    & b {
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    &::after {
+        @include pseudo;
+
+        top: 80%;
+        right: 0;
+        max-width: 173px;
+        max-height: 200px;
+        width: 12vw;
+        height: 13.9vw;
+        z-index: 20;
+        background-image: url(../img/svg/orange-cat.svg);
+        background-size: cover;
+    }
+}
+
+.mat-description__slogan-wrapper {
+    text-transform: uppercase;
+    padding: 0 3%;
+    position: relative;
+
+    &::after {
+        @include pseudo;
+
+        bottom: 0;
+        left: 50%;
+        max-width: 267px;
+        max-height: 187px;
+        width: 18.5vw;
+        height: 12.85vw;
+        transform: translateX(-50%);
+        z-index: 20;
+        background-image: url(../img/svg/green-cat.svg);
+        background-size: cover;
+    }
+}
+
+.mat-description__slogan {
+    font-size: 1.08rem;
+    line-height: 2.05rem;
+    font-weight: 400;
+
+    & b {
+        font-size: 1.55rem;
+        line-height: 3.05rem;
+    }
+}
+
+.mat-description__text {
+    margin: 0;
+    padding-bottom: 30%;
+    margin-bottom: 7%;
+    font-family: "SigmarOne", "Arial", sans-serif;
+    font-size: 2.15rem;
+    line-height: normal;
+    letter-spacing: 0.07em;
+    color: $accent-color;
+
+    & b {
+        font-size: 1.08rem;
+        line-height: 2.05rem;
+        letter-spacing: 0;
+        color: $main-color;
+    }
+}
+.mat-description__image {
+    width: 100%;
+
+    & img {
+        display: block;
+        width: 100%;
+    }
+}
+
+@include respond-to (medium) {
+    .mat-description {
+
+        &::before {
+            @include pseudo;
+            bottom: 102%;
+            right: 20%;
+            max-width: 195px;
+            max-height: 124px;
+            width: 13.6vw;
+            height: 8.65vw;
+            z-index: -2;
+            background-image: url(../img/svg/cat-foot-video2.svg);
+            background-size: cover;
+        }
+    }
+
+    .mat-description__title {
+
+        &::before {
+            @include pseudo;
+
+            top: 100%;
+            left: 0;
+            max-width: 205px;
+            max-height: 335px;
+            width: 14.24vw;
+            height: 23.3vw;
+            z-index: -2;
+            background-image: url(../img/svg/cat-foot-description.svg);
+            background-size: cover;
+        }
+    }
+
+    .mat-description__text {
+
+        &::after {
+            @include pseudo;
+            top: 60%;
+            left: 80%;
+            max-width: 205px;
+            max-height: 335px;
+            width: 14.24vw;
+            height: 23.3vw;
+            z-index: -2;
+            background-image: url(../img/svg/cat-foot-description2-tablet.svg);
+            background-size: cover;
+        }
+    }
+}
+
+@include respond-to(large) {
+    .mat-description {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 10%;
+        align-items: flex-start;
+    }
+    .mat-description__title {
+        width: 90%;
+        padding: 0 10rem;
+
+        &::after {
+            top: -70%;
+            right: -12%;
+        }
+    }
+
+    .mat-description__slogan-wrapper {
+        width: 50%;
+        margin-top: 5%;
+
+        &::after {
+            bottom: -10%;
+        }
+    }
+
+    .mat-description__image {
+        width: 50%;
+    }
+
+    .mat-description__text {
+        padding-bottom: 40%;
+        margin-bottom: 13%;
+
+        &::after {
+            max-width: 261px;
+            max-height: 216px;
+            width: 18.15vw;
+            height: 15vw;
+            background-image: url(../img/svg/cat-foot-description2.svg);
+        }
+    }
+}
+
+@include respond-to(big-large) {
+    .mat-description__title {
+        margin-bottom:  130px;
+
+        &::after {
+            top: -90%;
+        }
+
+        &::before {
+            left: -5%;
+        }
+    }
+}
+
+@include media-width-between(960px, 1180px) {
+    .mat-description__title {
+        font-size: 0.8rem;
+        line-height: 1.7rem;
+    }
+
+    .mat-description__text {
+        font-size: 2rem;
+    }
+
+    .mat-description__slogan {
+        font-size: 0.9rem;
+        line-height: 1.7rem;
+
+        & b {
+            font-size: 1.3rem;
+            line-height: 2.6rem;
+        }
+    }
+}

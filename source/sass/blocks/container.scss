@@ -1,0 +1,17 @@
+.container {
+    margin: $center;
+    width: map-get($container, xs);
+    max-width: 1200px;
+}
+
+@include respond-to(medium) {
+    .container {
+        width: map-get($container, ml);
+    }
+}
+
+@include respond-to(large) {
+    .container {
+        width: map-get($container, xl);
+    }
+}

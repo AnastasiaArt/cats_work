@@ -1,0 +1,69 @@
+@include font-face("GothamPro", "../fonts/gothampro-light", 300, normal);
+@include font-face("GothamPro", "../fonts/gothampro", 400, normal);
+@include font-face("GothamPro", "../fonts/gothampro-medium", 500, normal);
+@include font-face("GothamPro", "../fonts/gothampro-bold", 700, normal);
+@include font-face("SigmarOne", "../fonts/sigmarone", 400, normal);
+
+html {
+    box-sizing: border-box;
+    font-size: 0.9rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+@include respond-to(medium) {
+    html {
+        font-size: 1.1rem;
+    }
+}
+
+@include respond-to(large) {
+    html {
+        font-size: 1.2rem;
+    }
+}
+
+@include respond-to(big-large) {
+    html {
+        font-size: 1.3rem;
+    }
+}
+
+body {
+    font-family: "GothamPro", "Arial", sans-serif;
+    color: $main-color;
+    background-color: $white;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    padding: 0;
+    overflow-x: hidden;
+    min-width: 320px;
+
+    @include font-style(18px, 30px, 400);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden,
+input[type="range"].visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}

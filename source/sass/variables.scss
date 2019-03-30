@@ -1,0 +1,34 @@
+$center: 0 auto;
+$min-width-logo: 80px;
+//width
+$container: (
+    "xs": 92%,
+    "ml": 81.5%,
+    "xl": 83.4%
+);
+
+//adaptive
+$breakpoints: (
+    "small": 320px,
+    "medium": 660px,
+    "large": 960px,
+    "big-large": 1200px
+);
+
+//retina-image
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+//colors
+$main-color: #181818;
+$accent-color: #FDA725;
+$white: #ffffff;
+
+//height-header
+$header-height-xs: 80px;
+$header-height-ml: 100px;
+$header-height-xl: 120px;
+
+// transition conf
+$duration: 0.3s;
+$transition-style: ease-in-out;
