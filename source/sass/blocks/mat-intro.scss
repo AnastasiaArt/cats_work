@@ -19,7 +19,7 @@
 
 .mat-intro__title {
     font-family: "SigmarOne", "Arial", sans-serif;
-    font-size: 2.4rem;
+    font-size: 2.6rem;
     line-height: normal;
     letter-spacing: 0.07em;
     color: $accent-color;
@@ -29,14 +29,14 @@
 
 .mat-intro__text {
     font-weight: 500;
-    font-size: 1.1rem;
-    line-height: 1.8rem;
+    font-size: 1.15rem;
+    line-height: 2rem;
     text-transform: uppercase;
     color: $white;
     position: absolute;
     right: 0;
     left: 0;
-    bottom: 9vh;
+    top: 63%;
 }
 
 @include respond-to(medium) {
@@ -54,11 +54,11 @@
     }
 
     .mat-intro__text {
-        padding-left: 10rem;
-        font-size: 1rem;
         text-align: right;
         font-weight: 500;
-        bottom: 14vh;
+        top: 55%;
+        font-size: 1.4rem;
+        line-height: 2.1rem;
     }
 }
 
@@ -70,7 +70,6 @@
     }
 
     .mat-intro__title  {
-        font-size: 2.6rem;
         padding-top: 8vh;
 
         & br {
@@ -79,12 +78,25 @@
     }
 
     .mat-intro__text {
-        bottom: 15vh;
+        font-size: 1.4rem;
     }
 }
+
 @include respond-to(big-large) {
     .mat-intro__text {
-        font-size: 0.9rem;
-        bottom: 13vh;
+        top: 63%;
+        font-size: 1.3rem;
+    }
+}
+
+@include respond-to(extra-large) {
+    .mat-intro__text {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+
+    .mat-intro__title  {
+        font-size: 3.6rem;
+
     }
 }

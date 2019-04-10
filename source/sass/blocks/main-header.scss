@@ -23,9 +23,10 @@
 }
 
 .main-header__btn {
-    padding: 0.3rem 1rem;
-    max-width: 65%;
-    min-width: 130px;
+    padding: 0.2rem 0.6rem;
+    width: 45%;
+    min-width: 100px;
+    max-width: 150px;
 
     &:focus,
     &:hover {
@@ -39,8 +40,9 @@
     }
 
     .main-header__btn {
-        max-width: 275px;
-        padding: 0.6rem 1.4rem;
+        padding: 0.3rem 0.6rem;
+        width: 35%;
+        max-width: 200px;
     }
 }
 
@@ -50,6 +52,7 @@
     }
 
     .main-header__btn {
-        padding: 0.8rem 2.4rem;
+        max-width: 250px;
+        padding: 0.5rem 1rem;
     }
 }

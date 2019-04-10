@@ -11,6 +11,7 @@
     height: inherit;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -34,5 +35,21 @@
     &--robot {
         width: 20%;
         min-width: 50px;
+
+        & img {
+            display: block;
+            margin-right: auto;
+        }
     }
+
+    & img {
+        display: block;
+        margin-left: auto;
+    }
+}
+
+.main-footer__copyright {
+    width: 100%;
+    text-align: right;
+    font-size: 0.5rem;
 }

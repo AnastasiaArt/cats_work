@@ -29,6 +29,7 @@
     border: 1px solid $main-color;
     min-height: 165px;
     border-radius: 15px;
+    padding: 15px;
     margin-top: 1.5rem;
 }
 
@@ -38,12 +39,6 @@
 }
 
 @include respond-to(medium) {
-    .form-feedback__input,
-    .form-feedback___textarea {
-        width: 90%;
-        margin: $center;
-    }
-
     .form-feedback___textarea {
         margin-top: 1.5rem;
         margin-bottom: 1.5rem;
@@ -51,6 +46,12 @@
 
     .form-feedback__btn {
         margin-left: auto;
-        margin-right: 5%;
+    }
+}
+
+@include respond-to(large) {
+    .form-feedback__item {
+        width: 95%;
+        margin-left: auto;
     }
 }
